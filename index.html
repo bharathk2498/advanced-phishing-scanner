@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Phishing Scanner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="scanner-container">
+        <h1>Advanced Phishing Scanner 🛡️</h1>
+        
+        <div class="input-group">
+            <label for="url-input">URL to Scan</label>
+            <input type="url" id="url-input" placeholder="https://example.com" required>
+        </div>
+
+        <div class="input-group">
+            <label for="message-content">Paste Full Message (Email, SMS, etc.)</label>
+            <textarea id="message-content" placeholder="Paste the suspicious message text here..."></textarea>
+        </div>
+        
+        <div class="input-group">
+            <label for="sender-input">Claimed Sender (Optional)</label>
+            <input type="text" id="sender-input" placeholder="e.g., Amazon, DMV, Your Bank">
+        </div>
+
+        <button id="scan-button">Analyze Now</button>
+
+        <div id="analysis-report" style="display: none;">
+            <h2>Analysis Report</h2>
+            
+            <div class="report-section">
+                <h3>🔗 URL Analysis</h3>
+                <div id="url-results"></div>
+            </div>
+
+            <div class="report-section">
+                <h3>📄 Content Analysis</h3>
+                <div id="content-results"></div>
+            </div>
+
+            <div class="report-section">
+                <h3>👤 Sender Analysis</h3>
+                <div id="sender-results"></div>
+            </div>
+
+            <div class="report-section">
+                <h3>🚦 Overall Risk Assessment</h3>
+                <div id="summary-results"></div>
+            </div>
+        </div>
+
+        <p class="disclaimer">This tool performs basic checks and is not a substitute for a full security solution. Always be cautious when clicking links.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
